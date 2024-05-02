@@ -9,19 +9,7 @@ function increment() {
 // call increment function when page is loaded
 window.onload = setInterval(increment, 1000);
 
-// send user alert to enter fullscreen after 2 seconds
-setTimeout(() => {
-    ;
-    if (window.confirm('Please enter fullscreen for the best experience!')) {
-        document.body.style.backgroundColor = 'black';
-    }
-    else {
-        alert('You will be missing out on the best experience!');
-    }
-}, 500);
-
-// add event listener to enter-fullscreen button
-document.querySelector('#enter-fullscreen').addEventListener('click', () => {
-    console.log('enter fullscreen');
+function fullscreen() {
     document.body.requestFullscreen();
-});
+    document.querySelector('#enter-fullscreen').style.opacity = '0';
+}
