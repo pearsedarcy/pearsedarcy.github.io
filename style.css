@@ -8,20 +8,24 @@
   padding: 0;
 }
 
-
-
 body { 
 	background: #3778bf;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   height: 90vh;
   flex-direction: column;
   color: #fff;
   font-family: "Noto Sans", sans-serif;
   gap: 5rem;
+  margin: 0;
 }
 
+#enter-fullscreen {
+
+  cursor: pointer;
+margin-top: 40px;
+}
 /* CSS from https://codepen.io/janrubio/pen/AVqgmD */
 .loader {
   position: relative;
