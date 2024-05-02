@@ -20,9 +20,6 @@ setTimeout(() => {
     }
 }, 500);
 
-// get enter-fullscreen button
-let enterFullscreen = ;
-
 // add event listener to enter-fullscreen button
 document.querySelector('#enter-fullscreen').addEventListener('click', () => {
     console.log('enter fullscreen');
