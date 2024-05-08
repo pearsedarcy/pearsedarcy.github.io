@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Daisy UI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google tag (gtag.js) -->
@@ -39,6 +45,30 @@
           Sorry, we couldn’t find the page you’re looking for.
         </p>
         <div class="mt-10 flex items-center justify-center gap-x-6">
+          <div
+            class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          >
+            Redirecting in
+            <span class="countdown">
+              <span style="--value: 10"
+                ><script>
+                  const countdown = document.querySelector(".countdown span");
+                  let value = parseInt(
+                    countdown.style.getPropertyValue("--value")
+                  );
+                  const interval = setInterval(() => {
+                    value--;
+                    countdown.style.setProperty("--value", value);
+                    if (value === 0) {
+                      clearInterval(interval);
+                      window.location.href = "/";
+                    }
+                  }, 1000);
+                </script></span
+              >
+            </span>
+          </div>
+
           <a
             href="#"
             class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
